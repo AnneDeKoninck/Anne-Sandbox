@@ -1,0 +1,42 @@
+[project]
+name = "da-template"
+version = "0.1.0"
+description = "Internal Partenamut library with multiple extensions"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE.txt"]
+authors = [
+    { name = "Yago de Carvalho", email = "yago.decarvalhosouto@partenamut.be" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "diana-utils",
+]
+
+[tool.uv.sources]
+diana-utils = { git = "https://github.com/DAnAOps/diana_utils.git", rev = "v0.0.1" }
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.9.10",
+    "pre-commit>=4.1.0",
+    "ipywidgets>=8.1.5",
+    "ipykernel>=6.29.0",
+    "python-dotenv>=1.1.1",
+    "jupyterlab>=4.3.2",
+    "nbstripout>=0.8.1",
+    "nbqa>=1.9.1"
+]
+
+docs = [
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.0",
+    "mkdocstrings[python]>=0.24.0",
+    "pymdown-extensions>=10.8",
+    "markdown>=3.5",
+    "griffe-pydantic>=1.1.6",
+]
+all = [
+    "da_template[dev]",
+    "da_template[docs]"
+]

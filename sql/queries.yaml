@@ -1,0 +1,35 @@
+main_tables:
+  lxp_meeting_session: | 
+    SELECT *
+    FROM dm.dim_lxp_meeting_session_vw;
+
+  lxp_session: | 
+    SELECT *
+    FROM dm.dim_lxp_session_vw;
+
+  lxp_training_prov: |
+    SELECT *
+    FROM dm.dim_lxp_training_provider_vw;
+
+  lxp_training: |
+    SELECT *
+    FROM dm.dim_lxp_training_vw;
+
+  lxp_user: |
+    SELECT *
+    FROM dm.dim_lxp_user_vw;
+  
+  lxp_training_att: |
+    SELECT *
+    FROM dm.fact_lxp_training_attendance_vw 
+    LIMIT 1000;
+  
+  lxp_training_eval: | # Open comments, only 200 r
+    SELECT *
+    FROM dm.fact_lxp_training_evaluation_vw
+    LIMIT 1000;
+
+  lxp_training_hierarch: |
+    SELECT *
+    FROM dm.fact_lxp_training_hierarchy_vw
+    LIMIT 1000;

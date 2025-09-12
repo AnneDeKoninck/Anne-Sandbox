@@ -1,0 +1,27 @@
+# Ignore everything
+*.*
+
+# Allow these files
+!.gitattributes
+!.gitignore
+!.gitkeep
+
+!README.md
+!CONTRIBUTING.md
+
+!ConsProj_Schema.drawio.svg
+!Part.svg
+
+!queries.yaml
+
+!pyproject.toml
+
+# Allow these types
+!*.py
+!*.ipynb
+!*.md
+!*.svg
+
+# FORGET
+nocommit*
+

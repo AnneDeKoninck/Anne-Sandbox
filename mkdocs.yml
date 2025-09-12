@@ -1,0 +1,53 @@
+# mkdocs.yml
+site_name: Data Analytics Project Docs
+site_description: Documentation for the data analytics repository structure and workflows.
+site_author: Analytics Team
+
+# Theme configuration
+theme:
+  name: material
+  logo: assets/part.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+  palette:
+    # Light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Repository integration (optional)
+# repo_name: your-org/your-repo
+# repo_url: https://github.com/your-org/your-repo
+
+# Strict mode helps find broken links
+strict: true
+
+# Navigation menu structure
+nav:
+  - 'Home': 'index.md'
+  - 'Getting Started': 'getting-started.md'
+  - 'Repository':
+    - 'Structure': 'repo-structure.md'
+    - 'Pipelines': 'pipelines.md'
+    - 'SQL': 'sql.md'
+    - 'Notebooks': 'notebooks.md'
+    - 'Reports': 'reports.md'
+  - 'References': 'references.md'
+
+# Extensions for better markdown rendering
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
